@@ -5,9 +5,8 @@ require_once "sale.php";
 require_once "company.php";
 //object
 
-$company=new Company();
-echo $company->companyName."<br>";
-$company->info();
+echo Company::$companyName."<br>";
+Company::info();
 
 $Emp1 = new Accounting("jan", 20000);
 $Emp1->showData();
