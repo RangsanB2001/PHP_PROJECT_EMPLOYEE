@@ -1,18 +1,18 @@
 <?php
 require_once "company.php";
-abstract class Employee 
+class Employee 
 {
-    private $name;
-    private $department;
-    private $salary;
+    public $name;
+    public $department;
+    public $salary;
 
     
     //นิยาม
-    function __construct($name, $Department, $salary)
+    function __construct($name, $department, $salary)
     {
 
         $this->name = $name;
-        $this->department = $Department;
+        $this->department = $department;
         $this->salary = $salary;
     }
 
@@ -31,15 +31,14 @@ abstract class Employee
         $this->salary = $salary;
     }
 
-    public function showData()
-    {
-        echo "ชื่อ :" . $this->name . "<br/>";
-        echo "แผนก :" . $this->department . "<br/>";
-        echo "หน้าที่ :" . $this->description()."<br/>";
-        echo "เงินเดือน :" . $this->salary . "<br/>";
-        echo "ได้รับโบนัส :".$this->getBonus()."<br/>";
-    }
-    abstract public function description();
-    abstract public function getBonus():string;
+    // public function showData()
+    // {
+    //     echo "ชื่อ :" . $this->name . "<br/>";
+    //     echo "แผนก :" . $this->department . "<br/>";
+    //     echo "เงินเดือน :" . $this->salary . "<br/>";
+    //     echo "<hr>";
+    // }
+    // abstract public function description();
+    // abstract public function getBonus():string;
 } //จบการทำงานClass
 ?>

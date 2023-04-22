@@ -1,8 +1,5 @@
 <?php
-final class Company{
-   static public $companyName = "บริษัทยังๆๆนึกไม่ออก";
-   static public function info(){
-        echo "เจ้าของบริษัท : คุณปอนด์ <br><hr>";
-   }
+interface Company{
+   public function setCompanyName($name);
 }
 ?>
